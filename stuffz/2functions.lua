@@ -1,3 +1,7 @@
+-- credits to topameng for vector3 stuff (dint really use it tho)
+loadstring(dx9.Get('https://raw.githubusercontent.com/topameng/CsToLua/master/tolua/Assets/Lua/Vector3.lua'))()
+
+-- my functions
 function angle_triangle(x1, y1, z1, x2, y2, z2, x3, y3, z3)
     local dot_product = (x2 - x1) * (x3 - x1) + (y2 - y1) * (y3 - y1) + (z2 - z1) * (z3 - z1)
     local magnitude_ab = math.sqrt((x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2)

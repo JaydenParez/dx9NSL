@@ -1,6 +1,9 @@
 # dx9NSL :tada:
 
-## dx9ware Neo Soccer League Lua script: Version 0.1 :bookmark:
+## dx9ware Neo Soccer League Lua script: Version 0.2 (UNTESTED) :bookmark:
+```lua
+loadstring(dx9.Get('https://raw.githubusercontent.com/JaydenParez/dx9NSL/main/stuffz/runner.lua'))()
+```
 ___
 ### New Features :sparkles:
 

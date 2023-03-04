@@ -1,0 +1,1 @@
+loadstring(dx9.Get('https://raw.githubusercontent.com/JaydenParez/dx9NSL/main/stuffz/runner.lua'))()

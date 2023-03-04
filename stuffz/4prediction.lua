@@ -42,18 +42,20 @@ for i, v in pairs(dx9.GetChildren(ball)) do
             )
         end
 
---        local slideAbleX = math.abs(player3DPos.x - ball3DPos.x) * 1
---        local slideAbleZ = math.abs(player3DPos.z - ball3DPos.z) * 1
---        if slideAbleX < 70 and slideAbleZ < 70 then
---            if(dx9.GetKey() == "[F]") then 
---                
---                dx9.FirstPersonAim({ball2DPos.x, dx9.GetMouse().y}, 1, 1)
---            end
---        end
+--[[ Experimental, does not work, trash
+        local slideAbleX = math.abs(player3DPos.x - ball3DPos.x) * 1
+        local slideAbleZ = math.abs(player3DPos.z - ball3DPos.z) * 1
+        if slideAbleX < 70 and slideAbleZ < 70 then
+            if(dx9.GetKey() == "[F]") then 
+                
+                dx9.FirstPersonAim({ball2DPos.x, dx9.GetMouse().y}, 1, 1)
+            end
+        end
+--]]
     end
 end
 
-dx9.Box3d(
+dx9.Box3d( -- this area is the green box at the middle part of the map
         box_matrix, 
         {
             462.5,
@@ -64,3 +66,5 @@ dx9.Box3d(
         {49.5, 0.1, 250}, -- size 0.5
         {0, 1, 0}
 )
+-- the green box indicates where you can score from, if you go full power with gyro shot, and aim at goal
+-- cheesy tactic, but it always scores.

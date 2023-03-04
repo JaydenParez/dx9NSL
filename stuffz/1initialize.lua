@@ -1,3 +1,5 @@
+-- need to make these more automatic, too many hardcoded vectors.
+
 local dx9User = {
     Team = nil
 }
@@ -16,6 +18,17 @@ local Players = dx9.FindFirstChildOfClass(game, "Players")
 local localPlayerDir = dx9.FindFirstChild(Players, dx9.get_localplayer().Info.Name)
 local teamValue = dx9.FindFirstDescendant(localPlayerDir, 'Team')
 
+dx9User.Team = dx9.GetStringValue(teamValue)
+if dx9User.Team == "Blue" then
+    espColour.R = 0
+    espColour.G = 0
+    espColour.B = 255
+elseif dx9User.Team == "Red" then
+    espColour.R = 255
+    espColour.G = 0
+    espColour.B = 0
+end
+
 local redGoal = dx9.FindFirstChild(map, "RedGoal")
 local blueGoal = dx9.FindFirstChild(map, "BlueGoal")
 local redGoalNet = dx9.FindFirstChild(redGoal, "NET")
@@ -28,6 +41,8 @@ local redGoalRightPost = -900
 local blueGoalLeftPost = -900
 local blueGoalRightPost = -60
 local GoalMiddlePost = -875
+
+-- need to make these vectors retrieve automatically
 
 local bluePost = {
     left = {
